@@ -641,5 +641,26 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const featuresObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          featuresObserver.unobserve(entry.target); // animate only once
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    const section = document.querySelector(".features-section");
+    if (section) {
+      featuresObserver.observe(section);
+    }
+  });
+</script>
+
+
 </body>
 </html>
