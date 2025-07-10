@@ -230,6 +230,26 @@ body, html {
   }
 }
 
+@media (min-width: 769px) {
+  .about-us h2,
+  .about-us p {
+    animation: none;
+  }
+
+  .about-us h2.scroll-animate,
+  .about-us p.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .about-us h2.visible,
+  .about-us p.visible {
+    animation: slideFadeIn 1s ease-out forwards;
+  }
+}
+
+
+
 
 /* Products Section */
 .products{
