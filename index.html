@@ -662,5 +662,29 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.innerWidth >= 769) { // Only run on desktop
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // animate once
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      document.querySelectorAll(".about-us h2, .about-us p").forEach(el => {
+        el.classList.add("scroll-animate"); // apply base hidden state
+        observer.observe(el);
+      });
+    }
+  });
+</script>
+
+
+  
 </body>
 </html>
