@@ -409,7 +409,7 @@ body, html {
 .products-intro {
   max-width: 600px;
   margin: 0 auto 3rem;
-  font-size: .8rem;
+  font-size: rem;
   color: #272727;
 }
 
