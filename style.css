@@ -452,7 +452,7 @@ body, html {
 
     .why-choose-us .tagline::before {
       content: "● ";
-      color: #272727;
+        color: #959595;
     }
 
     .why-choose-us .headline {
