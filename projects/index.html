@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Projects</title>
+  <link rel="stylesheet" href="/style.css">
+
+   <link href="https://fonts.googleapis.com/css2?family=Tsukimi+Rounded:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+  body {
+  margin: 0;
+ background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%)
+  }
+
+.projects {
+  padding: 6rem 1rem;
+  text-align: center;
+    color: #000000;
+}
+
+.projects-intro {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  color: #272727;
+}
+
+
+
+.project-heading {
+  font-size: 1.8rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: #000000;
+  text-align: center;
+}
+
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Initial hidden state */
+.projects,
+.project-heading,
+.projects-intro {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+
+/* When scrolled into view */
+.projects.visible,
+.project-heading.visible,
+.projects-intro.visible {
+  animation: fadeSlideUp 0.8s ease forwards;
+}
+
+
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.project-card {
+  width: 280px;
+  height: 200px; /* Fixed height */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures full coverage without stretching */
+  display: block;
+  border-radius: 10px;
+}
+
+/* Remove padding for text (no longer needed) */
+.project-card p {
+  display: none;
+}
+
+/* Hide by default */
+.hidden {
+  display: none;
+}
+
+/* View More button style */
+.view-more-wrapper {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.view-more-btn {
+  padding: 0.7rem 1.5rem;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.view-more-btn:hover {
+  background-color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-card {
+    width: 90%;
+  }
+
+  .project-heading {
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+.cta-section-unique {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: -1.5rem auto 1.5rem auto; /* 👈 less vertical space */
+  animation: fadeInUp 0.7s ease forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.cta-section-unique h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #000000;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.cta-section-unique p {
+  font-size: 1.05rem;
+  color: #272727;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.cta-whatsapp-unique {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #fff;
+  padding: 0.9rem 1.8rem;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.cta-whatsapp-unique:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #1ebe5b, #0b715a);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Entrance animation */
+@keyframes fadeInUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 📱 Mobile Optimization */
+@media (max-width: 600px) {
+  .cta-section-unique {
+    padding: 2rem 1rem;
+    margin: -3.5rem auto 1rem auto; /* 👈 reduce gap top & bottom */
+  }
+
+  .cta-section-unique h3 {
+    font-size: 1.4rem;
+  }
+
+  .cta-section-unique p {
+    font-size: 1rem;
+  }
+
+  .cta-whatsapp-unique {
+    font-size: 0.95rem;
+    padding: 0.8rem 1.6rem;
+  }
+}
+
+
+
+/* Make body take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wrapper grows to fill available space */
+.page-wrapper {
+  flex: 1;
+}
+
+/* Simple footer already styled */
+.simple-footer {
+  background-color: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+
+.project-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-in-out;
+}
+
+.project-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+</style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+  <h1>Elegant Spaces</h1>
+</div>
+
+
+    <nav class="nav-links">
+     <a href="/">Home</a>
+<a href="/#products">Products</a>       <!-- scroll to section in homepage -->
+     
+<a href="/overview/">Overview</a>       <!-- goes to /overview/index.html -->
+<a href="/#blog">Blog</a>               <!-- scroll to blog section in homepage -->
+<a href="/#contactuss">Contact</a>        <!-- scroll to contact section in homepage -->
+
+
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </header>
+
+<section class="projects" id="projects">
+  <div class="container">
+    <h2>PROJECTS</h2>
+    <p class="projects-intro">Browse our completed furniture and furnishing projects.</p>
+
+    <!-- Sofa Projects -->
+<h3 class="project-heading">Sofas</h3>
+<div class="projects-grid">
+
+  <!-- Always Visible -->
+  <div class="project-card"><img src="/sofa.jpg" alt="Sofa 1"></div>
+  <div class="project-card"><img src="/sofa1.jpg" alt="Sofa 2"></div>
+  <div class="project-card"><img src="/sofa2.jpg" alt="Sofa 3"></div>
+  <div class="project-card"><img src="/sofa3.jpg" alt="Sofa 4"></div>
+
+  <!-- Hidden Initially -->
+  <div class="project-card hidden"><img src="/sofa6.jpg" alt="Sofa 7"></div>
+  <div class="project-card hidden"><img src="/sofa7.jpg" alt="Sofa 8"></div>
+  <div class="project-card hidden"><img src="/sofa8.jpg" alt="Sofa 9"></div>
+  <div class="project-card hidden"><img src="/sofa9.jpg" alt="Sofa 10"></div>
+</div>
+
+<!-- View More Button -->
+<div class="view-more-wrapper">
+  <button id="viewMoreBtn" class="view-more-btn">View More</button>
+</div>
+
+
+ <!-- Chairs -->
+    <h3 class="project-heading">Chairs</h3>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="/chairs.jpg" alt="Table Project 1">
+      </div>
+      <div class="project-card">
+        <img src="/chairs2.jpg" alt="Table Project 2">
+      </div>
+    </div>
+
+
+    <!-- Tables -->
+    <h3 class="project-heading">Tables</h3>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="/tables.jpg" alt="Table Project 1">
+      </div>
+      <div class="project-card">
+        <img src="/tables1.jpg" alt="Table Project 2">
+      </div>
+    </div>
+
+    <!-- Curtains -->
+    <h3 class="project-heading">Curtains</h3>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="/curtains.jpg" alt="Curtain Project 1">
+      </div>
+      <div class="project-card">
+        <img src="/curtains1.jpg" alt="Curtain Project 1">
+      </div>
+      <div class="project-card">
+        <img src="/curtains2.jpg" alt="Curtain Project 1">
+      </div>
+    </div>
+
+    <!-- Blinds -->
+    <h3 class="project-heading">Blinds</h3>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="/blinds.jpg" alt="Blind Project 1">
+      </div>
+      <div class="project-card">
+        <img src="/blinds1.jpg" alt="Blind Project 1">
+      </div>
+      <div class="project-card">
+        <img src="/blinds2.jpg" alt="Blind Project 1">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta-section-unique" id="whatsapp">
+  <h3>💡 Need help transforming your space?</h3>
+  <p>
+    At <strong>Elegant Spaces</strong>, we specialize in crafting custom interiors across Kerala that match your taste and lifestyle. From concept to execution—we do it all.
+  </p>
+  <a href="https://wa.me/+918590685098" class="cta-whatsapp-unique" target="_blank">
+    👉 Chat with our expert on WhatsApp
+  </a>
+</div>
+
+
+
+<body>
+  <div class="page-wrapper">
+    <!-- Header, brochure section, CTA, etc. -->
+  </div>
+
+  <footer class="simple-footer">
+    <p>&copy; 2025 Elegant Spaces. All rights reserved.</p>
+  </footer>
+</body>
+
+
+  <!-- JavaScript -->
+ <script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+    const navLinks = document.querySelector('.nav-links');
+    const hamburger = document.querySelector('.hamburger');
+
+    const clickedInsideMenu = navLinks.contains(event.target);
+    const clickedHamburger = hamburger.contains(event.target);
+
+    // If not clicked on menu or hamburger, close the menu
+    if (!clickedInsideMenu && !clickedHamburger) {
+      navLinks.classList.remove('show');
+    }
+  });
+</script>
+
+
+<script>
+  document.getElementById("viewMoreBtn").addEventListener("click", function () {
+    const hiddenCards = document.querySelectorAll(".project-card.hidden");
+    
+    hiddenCards.forEach(card => {
+      card.classList.remove("hidden");
+      card.classList.add("visible"); // optional: triggers animation if you've added scroll animations
+    });
+
+    this.style.display = "none"; // hide the button after revealing all
+  });
+</script>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".project-card");
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          obs.unobserve(entry.target); // Only animate once
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    cards.forEach(card => observer.observe(card));
+  });
+</script>
+
+
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.testimonial-alt-item').forEach(item => {
+    observer.observe(item);
+  });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // Remove if you want it to animate again on scroll
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll(".projects, .project-heading, .projects-intro").forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
+
+
+</body>
+</html>

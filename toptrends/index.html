@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interior Design Trends | Elegant Spaces Blog</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+   body {
+  margin: 0;
+  padding: 0;
+  color: rgb(255, 255, 255);
+}
+   .blog-container {
+  max-width: 900px;
+   margin: auto;
+  padding: 0.8rem;
+  margin-top: 6rem;
+
+  border-radius: 10px;
+}
+
+
+    .blog-title {
+      font-size: 2rem;
+      font-weight: 600;
+       margin-top: -1rem; /* Increases vertical spacing from top */
+      color: #000000;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-date {
+      font-size: 0.9rem;
+      color: #272727;
+      margin-bottom: 1.5rem;
+    }
+
+    .blog-image {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    .blog-content p {
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+       color: #272727;
+      text-align: left;
+    }
+
+    .blog-content h2 {
+      font-size: 1.4rem;
+      margin-top: 1.5rem;
+      color: #000000;
+      margin-bottom: 0.5rem;
+    }
+    
+
+.author-box-slim {
+  display: flex;
+  align-items: center;
+  background: #f4f4f4;
+  padding: 1rem 1.2rem;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  margin-top: 2rem;
+}
+
+.author-info strong {
+  color: #000000;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.author-info p {
+  margin: 0;
+  color: #666;
+}
+
+/* Optional: Add media query for extra spacing if needed */
+@media (max-width: 600px) {
+  .author-box-slim {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+
+.cta-section-unique {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 4rem auto;
+  animation: fadeInUp 0.7s ease forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.cta-section-unique h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #000000;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.cta-section-unique p {
+  font-size: 1.05rem;
+  color: #272727;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.cta-whatsapp-unique {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #fff;
+  padding: 0.9rem 1.8rem;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.cta-whatsapp-unique:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #1ebe5b, #0b715a);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Entrance animation */
+@keyframes fadeInUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+  .cta-section-unique {
+    padding: 2rem 0.2rem;
+  }
+
+  .cta-section-unique h3 {
+    font-size: 1.4rem;
+  }
+
+  .cta-section-unique p {
+    font-size: 1rem;
+  }
+
+  .cta-whatsapp-unique {
+    font-size: 0.95rem;
+    padding: 0.8rem 1.6rem;
+}
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #666;
+  text-align: center;
+  font-family: 'Comfortaa', sans-serif;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  letter-spacing: 1.2px;
+  border-top: 1px solid #222;
+}
+/* For small devices */
+@media (max-width: 480px) {
+  footer {
+    font-size: 0.7rem;
+    
+  }
+}
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+  <h1>Elegant Spaces</h1>
+</div>
+
+
+    <nav class="nav-links">
+       <a href="/">Home</a>
+<a href="/#products">Products</a>       <!-- scroll to section in homepage -->
+<a href="/projects/">Projects</a>       <!-- goes to /projects/index.html -->
+<a href="/overview/">Overview</a>       <!-- goes to /overview/index.html -->
+<a href="/#blog">Blog</a>               <!-- scroll to blog section in homepage -->
+<a href="/#contactuss">Contact</a>        <!-- scroll to contact section in homepage -->
+
+
+
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <div class="blog-container">
+   <h1 class="blog-title">Top Interior Design Trends for 2025</h1>
+<p class="blog-date">Published on July 5, 2025</p>
+
+<img src="/blog1.jpg" alt="Interior Trends 2025" class="blog-image" />
+
+<div class="blog-content">
+  <p>
+    Interior design in 2025 is all about finding the perfect balance between "comfort, sustainability, and personal style". From earth-inspired tones to smart multifunctional furniture, this year’s trends are redefining how we experience our spaces.
+  </p>
+
+  <h2>1. Earthy & Warm Color Palettes</h2>
+  <p>
+    Say goodbye to cold greys and stark whites. 2025 is embracing warm tones like terracotta, olive green, clay, and deep mustard. These colors make homes feel cozy, grounded, and welcoming.
+  </p>
+
+  <h2>2. Smart & Multifunctional Furniture</h2>
+  <p>
+    With urban spaces shrinking, furniture needs to be as efficient as it is stylish. Foldable desks, beds with storage, and extendable dining tables are becoming must-haves in modern homes.
+  </p>
+
+  <h2>3. Natural Materials & Textures</h2>
+  <p>
+    Interiors are leaning into authenticity. Materials like cane, bamboo, raw wood, clay, and linen are being used for both furniture and decor. These textures bring nature indoors and create a calming ambiance.
+  </p>
+
+  <h2>4. Statement Lighting</h2>
+  <p>
+    Lighting is no longer just functional—it's artistic. Pendant lights, oversized floor lamps, and sculptural chandeliers are making bold statements in living rooms and bedrooms alike.
+  </p>
+
+  <h2>5. Curved Furniture & Organic Shapes</h2>
+  <p>
+    Soft curves are taking over hard angles. Expect to see rounded sofas, arched mirrors, and organic-shaped coffee tables giving spaces a more relaxed, fluid feel.
+  </p>
+
+  <h2>6. Biophilic Design</h2>
+  <p>
+    Plants continue to dominate interiors—not just as decor but as a core design element. Vertical gardens, indoor trees, and plant walls promote well-being and purify the air.
+  </p>
+
+  <h2>7. Sustainable & Recycled Design</h2>
+  <p>
+    Conscious design is more important than ever. Homeowners are choosing eco-friendly paints, recycled tiles, and second-hand furniture to create beautiful and responsible spaces.
+  </p>
+
+  <p>
+    Whether you're redesigning a single room or your entire home, 2025 is full of opportunities to create spaces that are **soulful, stylish, and sustainable**.
+  </p>
+</div>
+
+
+<div class="author-box-slim">
+  <div class="author-info">
+    <strong>About Elegant Spaces</strong>
+    <p>Designing modern interiors across South India since 2018. Where creativity meets comfort.</p>
+  </div>
+</div>
+
+<div class="cta-section-unique" id="whatsapp">
+  <h3>💡 Need help transforming your space?</h3>
+  <p>
+    At <strong>Elegant Spaces</strong>, we specialize in crafting custom interiors across Kerala that match your taste and lifestyle. From concept to execution—we do it all.
+  </p>
+  <a href="https://wa.me/+917736930939" class="cta-whatsapp-unique" target="_blank">
+    👉 Chat with our expert on WhatsApp
+  </a>
+</div>
+</div>
+
+ <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Elegant Spaces. All rights reserved.</p>
+  </footer>
+
+
+ <!-- JavaScript -->
+ <script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+    const navLinks = document.querySelector('.nav-links');
+    const hamburger = document.querySelector('.hamburger');
+
+    const clickedInsideMenu = navLinks.contains(event.target);
+    const clickedHamburger = hamburger.contains(event.target);
+
+    // If not clicked on menu or hamburger, close the menu
+    if (!clickedInsideMenu && !clickedHamburger) {
+      navLinks.classList.remove('show');
+    }
+  });
+</script>
+
+
+</body>
+</html>
